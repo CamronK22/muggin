@@ -1,0 +1,17 @@
+{
+  "name": "muggin",
+  "version": "0.1.0",
+  "description": "Compiles Muggin markup to HTML",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "muggin": "./index.js"
+  },
+  "author": "Camron Korell",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "pug": "^3.0.2"
+  }
+}
