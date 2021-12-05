@@ -10,48 +10,50 @@ To use:
 	
   
 <b>Example syntax:</b>
+
 ```
+
 doctype html
 
 // Indentation is still enforced
 html(lang="en") {
-	head {
-		meta(charset="utf-8")
-		title Title!
+    head {
+        meta(charset="utf-8")
+        title Title!
 
-		// "~>" denotes begining of style or script
-		style ~> {
-			body {
-				background-color: #212121;
-			}
-			.yellow {
-				color: #ffff00;
-			}
-		}
+        // "~>" denotes begining of style or script
+        style ~> {
+            body {
+                background-color: #212121;
+            }
+            .yellow {
+                color: #ffff00;
+            }
+        }
 
-		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
-		script(type="text/javascript") ~> {
-			async function fetchState() {
-				let response = await fetch("https://api.kanye.rest/")
-				let json = await response.json()
-				return json
-			}
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+        script(type="text/javascript") ~> {
+            async function fetchState() {
+                let response = await fetch("https://api.kanye.rest/")
+                let json = await response.json()
+                return json
+            }
 
-			$(document).ready(() => {
-				fetchState().then(state => {
-					$("#quote").text(state.quote)
-				})
-			})
-		}
-	}
+            $(document).ready(() => {
+                fetchState().then(state => {
+                    $("#quote").text(state.quote)
+                })
+            })
+        }
+    }
 
-	body {
-		#main {
-			h1.yellow Header!
-			p.yellow Paragraph!
-			#quote.yellow
-		}
-	}
+    body {
+        #main {
+            h1.yellow Header!
+            p.yellow Paragraph!
+            #quote.yellow
+        }
+    }
 }
 
 ```
