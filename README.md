@@ -21,7 +21,7 @@ html(lang="en") {
         meta(charset="utf-8")
         title Title!
 
-        // "~>" denotes begining of style or script
+        // "~>" denotes beginning of style or script
         style ~> {
             body {
                 background-color: #212121;
